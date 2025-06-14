@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCN Dallas - Remnant Christian Network</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link" data-i18n="skip_to_main_content">Skip to main content</a>
+
+    <!-- SECTION: HEADER & NAVIGATION -->
+    <header class="main-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/rcn-dallas-logo.png" alt="RCN Dallas Logo">
+            </a>
+
+            <!-- Main Navigation Links -->
+            <ul class="nav-links-main">
+                <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="#new-to-rcn-section" data-i18n="nav_im_new">I'm New</a></li>
+                <li><a href="#about-rcn-section" data-i18n="nav_about_us">About Us</a></li>
+                <li><a href="#messages-teachings-section" data-i18n="nav_sermons">Sermons</a></li>
+                <li><a href="#ministries-section" data-i18n="nav_ministries">Ministries</a></li>
+                <li><a href="#events-section" data-i18n="nav_events">Events</a></li>
+            </ul>
+
+            <!-- Right-side Action Links -->
+            <div class="nav-actions">
+                <a href="#partner-with-us-section" class="nav-give-link" data-i18n="nav_give">Give</a>
+                <a href="#" class="btn btn-lang" aria-label="Switch language" data-i18n="lang_button_text">ES</a>
+            </div>
+
+            <div class="menu-burger" role="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- SECTION: HERO -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-icon-circle">R</div>
+                <h1 data-i18n="rcn_dallas_full_title">Remnant Christian Network <span class="subtitle-hero">Dallas, TX</span></h1>
+                <p class="tagline" data-i18n="rcn_tagline">Restoring the Order of Apostolic Christianity</p>
+                <a href="#current-campaigns-section" class="btn btn-primary" data-i18n="join_us_sunday">Join Us This Sunday</a>
+            </div>
+            <div class="hero-info-cards">
+                <div class="info-card">
+                    <img src="images/icon-prayer.png" alt="Prayer Icon">
+                    <span data-i18n="prayer_services_info">Prayer Services: Tuesdays | 8PM on Zoom</span>
+                </div>
+                <div class="info-card">
+                    <img src="images/icon-worship.png" alt="Worship Icon">
+                    <span data-i18n="worship_info">Worship: 1st Sat of Month | 7AM-5PM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CURRENT CAMPAIGNS -->
+        <section class="page-section bg-light" id="current-campaigns-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_title_campaigns">Current Campaigns</h2>
+                <div class="grid-2-col">
+                    <div class="campaign-card">
+                        <span class="campaign-tag" data-i18n="campaign_active_tag">Active Campaign</span>
+                        <h3 data-i18n="campaign_100_days_title">100 Days of Prayer</h3>
+                        <p data-i18n="campaign_100_days_desc">Join us in seeking God's face through dedicated prayer and fasting.</p>
+                        <a href="campaign-prayer.html" class="btn btn-light" data-i18n="btn_learn_more">Learn More</a>
+                    </div>
+                    <div class="campaign-card style-2">
+                        <span class="campaign-tag" data-i18n="campaign_upcoming_tag">Upcoming</span>
+                        <h3 data-i18n="campaign_promise_title">The Promise: A 3-Day Fast</h3>
+                        <p data-i18n="campaign_promise_desc">Consecrate yourself for breakthrough and divine encounter.</p>
+                        <a href="campaign-fast.html" class="btn btn-light" data-i18n="btn_join_now">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: NEW TO RCN DALLAS -->
+        <section class="page-section" id="new-to-rcn-section">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="section_title_new_to_rcn">New to RCN Dallas?</h2>
+                <p class="section-subtitle" data-i18n="new_to_rcn_subtitle">We're excited to welcome you into our church family. Here's everything you need to know for your first visit.</p>
+                <div class="grid-3-col">
+                    <div class="visitor-card">
+                        <img src="images/visit-location.jpg" alt="Exterior view of RCN Dallas church building" class="visitor-card-image" loading="lazy">
+                        <div class="visitor-card-content">
+                            <h4 data-i18n="new_location_time_title">Location & Time</h4>
+                            <p data-i18n="new_location_time_desc">Join us for worship on the 1st Saturday of each month from 7AM-5PM</p>
+                        </div>
+                    </div>
+                    <div class="visitor-card">
+                        <img src="images/visit-prayer.jpg" alt="Congregation participating in a prayer service" class="visitor-card-image" loading="lazy">
+                        <div class="visitor-card-content">
+                            <h4 data-i18n="new_prayer_services_title">Prayer Services</h4>
+                            <p data-i18n="new_prayer_services_desc">Weekly prayer meetings every Tuesday at 8PM via Zoom</p>
+                        </div>
+                    </div>
+                    <div class="visitor-card">
+                        <img src="images/visit-fellowship.jpg" alt="Church community in fellowship and conversation" class="visitor-card-image" loading="lazy">
+                        <div class="visitor-card-content">
+                            <h4 data-i18n="new_what_to_expect_title">What to Expect</h4>
+                            <p data-i18n="new_what_to_expect_desc">Authentic worship, prayer, and fellowship in a welcoming community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ABOUT RCN DALLAS -->
+        <section class="page-section bg-light" id="about-rcn-section">
+            <div class="container">
+                <div class="grid-2-col-about">
+                    <div class="about-text">
+                        <h2 class="section-title align-left" data-i18n="section_title_about_rcn">About RCN Dallas</h2>
+                        <p data-i18n="about_rcn_desc">We are a community committed to restoring the order of Apostolic Christianity through prayer, worship, and fellowship. Join us as we seek God's heart together and build a strong foundation of faith.</p>
+                        <ul class="feature-list">
+                            <li data-i18n="about_feature_apostolic">Apostolic Foundation</li>
+                            <li data-i18n="about_feature_prayer_centered">Prayer-Centered</li>
+                            <li data-i18n="about_feature_community_focus">Community Focus</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/about-us-image.jpg" alt="Church community worshiping together in a sanctuary" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MESSAGES & TEACHINGS -->
+        <section class="page-section" id="messages-teachings-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_title_messages">Messages & Teachings</h2>
+                <div class="grid-3-col">
+                    <div class="message-card">
+                        <img src="images/message-1.jpg" alt="Thumbnail for 'The Journey of Intentionality' sermon" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_intentionality_title">The Journey of Intentionality</h4>
+                            <p data-i18n="message_intentionality_desc">Understanding the foundation of our prayer life</p>
+                            <a href="https://youtu.be/eRPcfmZ-Hd4" target="_blank" class="message-link" data-i18n="btn_watch_now">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="message-card">
+                        <img src="images/message-2.jpg" alt="Thumbnail for 'The Angels are Singing Halle' sermon" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_angels_title">The Angels are Singing Halle</h4>
+                            <p data-i18n="message_angels_desc">Enjoy hearing RCN Dallas' very own Pastor Phillip, as he ministers powerfully at one of their recent 10 hour prayer service.</p>
+                            <a href="https://youtu.be/aXep6S4634w" target="_blank" class="message-link" data-i18n="btn_listen_now">Listen Now</a>
+                        </div>
+                    </div>
+                    <div class="message-card">
+                        <img src="images/message-3.jpg" alt="Thumbnail for 'Healing at Philanthropy of Jesus Service' recap" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_healing_title">Healing at Philanthropy of Jesus Service</h4>
+                            <p data-i18n="message_healing_desc">Recap of the powerful healing that took place at the Philanthropy of Jesus service with Pastor Philip Gbir.</p>
+                            <a href="https://youtu.be/0TR-hn4P6kk" target="_blank" class="message-link" data-i18n="btn_download">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MINISTRIES (Placeholder, add content as needed) -->
+        <section class="page-section bg-light" id="ministries-section">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="section_title_ministries">Our Ministries</h2>
+                <p class="section-subtitle" data-i18n="ministries_subtitle">Discover the various ways to connect, serve, and grow within our church family.</p>
+                <p class="english-content" data-i18n="ministries_placeholder_en">(Content for Ministries section will go here.)</p>
+                <p class="spanish-content" data-i18n="ministries_placeholder_es" style="display: none;">(El contenido de la sección Ministerios irá aquí.)</p>
+            </div>
+        </section>
+
+        <!-- SECTION: EVENTS (Placeholder, add content as needed) -->
+        <section class="page-section" id="events-section">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="section_title_events">Upcoming Events</h2>
+                <p class="section-subtitle" data-i18n="events_subtitle">Stay up-to-date with our latest gatherings, special services, and community activities.</p>
+                <p class="english-content" data-i18n="events_placeholder_en">(Content for Events section will go here.)</p>
+                <p class="spanish-content" data-i18n="events_placeholder_es" style="display: none;">(El contenido de la sección Eventos irá aquí.)</p>
+            </div>
+        </section>
+
+        <!-- SECTION: PARTNER WITH US -->
+        <section class="page-section bg-light" id="partner-with-us-section">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="section_title_partner">Partner With Us</h2>
+                <p class="section-subtitle" data-i18n="partner_subtitle">Your generosity helps us continue our mission to restore apostolic order and build God's kingdom through prayer, worship, and community.</p>
+                <div class="grid-2-col slim-gap">
+                    <div class="partner-card">
+                        <img src="images/icon-gift.png" class="partner-icon" alt="Gift icon">
+                        <h4 data-i18n="partner_onetime_title">One-Time Gift</h4>
+                        <p data-i18n="partner_onetime_desc">Make a single donation to support our ministry and community outreach</p>
+                        <a href="give-onetime.html" class="btn btn-primary" data-i18n="btn_give_now">Give Now</a>
+                    </div>
+                    <div class="partner-card">
+                        <img src="images/icon-giving.png" class="partner-icon" alt="Hands giving icon">
+                        <h4 data-i18n="partner_monthly_title">Monthly Giving</h4>
+                        <p data-i18n="partner_monthly_desc">Become a monthly partner and help us plan for consistent ministry impact</p>
+                        <a href="give-monthly.html" class="btn btn-secondary" data-i18n="btn_partner_monthly">Partner Monthly</a>
+                    </div>
+                </div>
+                <p class="disclaimer" data-i18n="partner_disclaimer">RCN Dallas is a registered 501(c)(3) organization. All donations are tax-deductible.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://facebook.com/rcndallas" target="_blank" aria-label="Facebook" data-i18n="social_facebook">Facebook</a>
+            <a href="https://instagram.com/rcndallas" target="_blank" aria-label="Instagram" data-i18n="social_instagram">Instagram</a>
+            <a href="https://youtube.com/rcndallas" target="_blank" aria-label="YouTube" data-i18n="social_youtube">YouTube</a>
+        </div>
+        <p data-i18n="footer_text">© 2024 Remnant Christian Network. Made with ❤️.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBurger = document.querySelector('.menu-burger');
+            const navLinksMain = document.querySelector('.nav-links-main');
+            const navActions = document.querySelector('.nav-actions');
+
+            menuBurger.addEventListener('click', () => {
+                navLinksMain.classList.toggle('nav-open');
+                navActions.classList.toggle('nav-open');
+                menuBurger.classList.toggle('open');
+                menuBurger.setAttribute('aria-expanded', navLinksMain.classList.contains('nav-open'));
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href').length > 1) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            if (navLinksMain.classList.contains('nav-open')) {
+                                navLinksMain.classList.remove('nav-open');
+                                navActions.classList.remove('nav-open');
+                                menuBurger.classList.remove('open');
+                                menuBurger.setAttribute('aria-expanded', false);
+                            }
+
+                            const headerHeight = document.querySelector('.main-header').offsetHeight;
+
+                            window.scrollTo({
+                                top: targetElement.offsetTop - headerHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // --- Language Switching Logic ---
+            const translations = {
+                en: {
+                    skip_to_main_content: "Skip to main content",
+                    nav_home: "Home",
+                    nav_im_new: "I'm New",
+                    nav_about_us: "About Us",
+                    nav_sermons: "Sermons",
+                    nav_ministries: "Ministries",
+                    nav_events: "Events",
+                    nav_give: "Give",
+                    lang_button_text: "ES",
+                    rcn_dallas_full_title: "Remnant Christian Network <span class=\"subtitle-hero\">Dallas, TX</span>",
+                    rcn_tagline: "Restoring the Order of Apostolic Christianity",
+                    join_us_sunday: "Join Us This Sunday",
+                    prayer_services_info: "Prayer Services: Tuesdays | 8PM on Zoom",
+                    worship_info: "Worship: 1st Sat of Month | 7AM-5PM",
+                    section_title_campaigns: "Current Campaigns",
+                    campaign_active_tag: "Active Campaign",
+                    campaign_100_days_title: "100 Days of Prayer",
+                    campaign_100_days_desc: "Join us in seeking God's face through dedicated prayer and fasting.",
+                    btn_learn_more: "Learn More",
+                    campaign_upcoming_tag: "Upcoming",
+                    campaign_promise_title: "The Promise: A 3-Day Fast",
+                    campaign_promise_desc: "Consecrate yourself for breakthrough and divine encounter.",
+                    btn_join_now: "Join Now",
+                    section_title_new_to_rcn: "New to RCN Dallas?",
+                    new_to_rcn_subtitle: "We're excited to welcome you into our church family. Here's everything you need to know for your first visit.",
+                    new_location_time_title: "Location & Time",
+                    new_location_time_desc: "Join us for worship on the 1st Saturday of each month from 7AM-5PM",
+                    new_prayer_services_title: "Prayer Services",
+                    new_prayer_services_desc: "Weekly prayer meetings every Tuesday at 8PM via Zoom",
+                    new_what_to_expect_title: "What to Expect",
+                    new_what_to_expect_desc: "Authentic worship, prayer, and fellowship in a welcoming community",
+                    section_title_about_rcn: "About RCN Dallas",
+                    about_rcn_desc: "We are a community committed to restoring the order of Apostolic Christianity through prayer, worship, and fellowship. Join us as we seek God's heart together and build a strong foundation of faith.",
+                    about_feature_apostolic: "Apostolic Foundation",
+                    about_feature_prayer_centered: "Prayer-Centered",
+                    about_feature_community_focus: "Community Focus",
+                    section_title_messages: "Messages & Teachings",
+                    message_intentionality_title: "The Journey of Intentionality",
+                    message_intentionality_desc: "Understanding the foundation of our prayer life",
+                    btn_watch_now: "Watch Now",
+                    message_angels_title: "The Angels are Singing Halle",
+                    message_angels_desc: "Enjoy hearing RCN Dallas' very own Pastor Phillip, as he ministers powerfully at one of their recent 10 hour prayer service.",
+                    btn_listen_now: "Listen Now",
+                    message_healing_title: "Healing at Philanthropy of Jesus Service",
+                    message_healing_desc: "Recap of the powerful healing that took place at the Philanthropy of Jesus service with Pastor Philip Gbir.",
+                    btn_download: "Download",
+                    section_title_ministries: "Our Ministries",
+                    ministries_subtitle: "Discover the various ways to connect, serve, and grow within our church family.",
+                    ministries_placeholder_en: "(Content for Ministries section will go here.)",
+                    ministries_placeholder_es: "(El contenido de la sección Ministerios irá aquí.)",
+                    section_title_events: "Upcoming Events",
+                    events_subtitle: "Stay up-to-date with our latest gatherings, special services, and community activities.",
+                    events_placeholder_en: "(Content for Events section will go here.)",
+                    events_placeholder_es: "(El contenido de la sección Eventos irá aquí.)",
+                    section_title_partner: "Partner With Us",
+                    partner_subtitle: "Your generosity helps us continue our mission to restore apostolic order and build God's kingdom through prayer, worship, and community.",
+                    partner_onetime_title: "One-Time Gift",
+                    partner_onetime_desc: "Make a single donation to support our ministry and community outreach",
+                    btn_give_now: "Give Now",
+                    partner_monthly_title: "Monthly Giving",
+                    partner_monthly_desc: "Become a monthly partner and help us plan for consistent ministry impact",
+                    btn_partner_monthly: "Partner Monthly",
+                    partner_disclaimer: "RCN Dallas is a registered 501(c)(3) organization. All donations are tax-deductible.",
+                    footer_text: "© 2024 Remnant Christian Network. Made with ❤️.",
+                    social_facebook: "Facebook",
+                    social_instagram: "Instagram",
+                    social_youtube: "YouTube"
+                },
+                es: {
+                    skip_to_main_content: "Saltar al contenido principal",
+                    nav_home: "Inicio",
+                    nav_im_new: "Soy Nuevo",
+                    nav_about_us: "Nosotros",
+                    nav_sermons: "Sermones",
+                    nav_ministries: "Ministerios",
+                    nav_events: "Eventos",
+                    nav_give: "Donar",
+                    lang_button_text: "EN",
+                    rcn_dallas_full_title: "Red Cristiana Remanente <span class=\"subtitle-hero\">Dallas, TX</span>",
+                    rcn_tagline: "Restaurando el Orden de la Cristiandad Apostólica",
+                    join_us_sunday: "Únete este Domingo",
+                    prayer_services_info: "Servicios de Oración: Martes | 8PM en Zoom",
+                    worship_info: "Adoración: 1er Sábado del Mes | 7AM-5PM",
+                    section_title_campaigns: "Campañas Actuales",
+                    campaign_active_tag: "Campaña Activa",
+                    campaign_100_days_title: "100 Días de Oración",
+                    campaign_100_days_desc: "Únete a nosotros en la búsqueda del rostro de Dios a través de la oración y el ayuno dedicados.",
+                    btn_learn_more: "Saber Más",
+                    campaign_upcoming_tag: "Próximo",
+                    campaign_promise_title: "La Promesa: Un Ayuno de 3 Días",
+                    campaign_promise_desc: "Conságrese para el avance y el encuentro divino.",
+                    btn_join_now: "Únete Ahora",
+                    section_title_new_to_rcn: "¿Nuevo en RCN Dallas?",
+                    new_to_rcn_subtitle: "Estamos emocionados de darle la bienvenida a nuestra familia de la iglesia. Aquí encontrará todo lo que necesita saber para su primera visita.",
+                    new_location_time_title: "Ubicación y Hora",
+                    new_location_time_desc: "Únase a nosotros para el culto el primer sábado de cada mes de 7 AM a 5 PM",
+                    new_prayer_services_title: "Servicios de Oración",
+                    new_prayer_services_desc: "Reuniones de oración semanales todos los martes a las 8 PM vía Zoom",
+                    new_what_to_expect_title: "Qué Esperar",
+                    new_what_to_expect_desc: "Culto auténtico, oración y compañerismo en una comunidad acogedora",
+                    section_title_about_rcn: "Acerca de RCN Dallas",
+                    about_rcn_desc: "Somos una comunidad comprometida con la restauración del orden de la cristiandad apostólica a través de la oración, la adoración y el compañerismo. Únase a nosotros mientras buscamos el corazón de Dios juntos y construimos una sólida base de fe.",
+                    about_feature_apostolic: "Fundación Apostólica",
+                    about_feature_prayer_centered: "Centrado en la Oración",
+                    about_feature_community_focus: "Enfoque Comunitario",
+                    section_title_messages: "Mensajes y Enseñanzas",
+                    message_intentionality_title: "El Viaje de la Intencionalidad",
+                    message_intentionality_desc: "Comprendiendo el fundamento de nuestra vida de oración",
+                    btn_watch_now: "Ver Ahora",
+                    message_angels_title: "Los Ángeles Cantan Aleluya",
+                    message_angels_desc: "Disfrute escuchando al propio Pastor Phillip de RCN Dallas, mientras ministra poderosamente en uno de sus recientes servicios de oración de 10 horas.",
+                    btn_listen_now: "Escuchar Ahora",
+                    message_healing_title: "Sanidad en el Servicio de Filantropía de Jesús",
+                    message_healing_desc: "Recapitulación de la poderosa sanidad que tuvo lugar en el servicio de Filantropía de Jesús con el Pastor Philip Gbir.",
+                    btn_download: "Descargar",
+                    section_title_ministries: "Nuestros Ministerios",
+                    ministries_subtitle: "Descubre las diversas formas de conectar, servir y crecer dentro de nuestra familia de la iglesia.",
+                    ministries_placeholder_en: "(El contenido de la sección Ministerios irá aquí.)",
+                    ministries_placeholder_es: "(El contenido de la sección Ministerios irá aquí.)",
+                    section_title_events: "Próximos Eventos",
+                    events_subtitle: "Manténgase al día con nuestras últimas reuniones, servicios especiales y actividades comunitarias.",
+                    events_placeholder_en: "(El contenido de la sección Eventos irá aquí.)",
+                    events_placeholder_es: "(El contenido de la sección Eventos irá aquí.)",
+                    section_title_partner: "Asóciate con Nosotros",
+                    partner_subtitle: "Su generosidad nos ayuda a continuar nuestra misión de restaurar el orden apostólico y construir el reino de Dios a través de la oración, la adoración y la comunidad.",
+                    partner_onetime_title: "Donación Única",
+                    partner_onetime_desc: "Haga una sola donación para apoyar nuestro ministerio y alcance comunitario",
+                    btn_give_now: "Donar Ahora",
+                    partner_monthly_title: "Donación Mensual",
+                    partner_monthly_desc: "Conviértase en un socio mensual y ayúdenos a planificar un impacto ministerial constante",
+                    btn_partner_monthly: "Asociarse Mensualmente",
+                    partner_disclaimer: "RCN Dallas es una organización 501(c)(3) registrada. Todas las donaciones son deducibles de impuestos.",
+                    footer_text: "© 2024 Red Cristiana Remanente. Hecho con ❤️.",
+                    social_facebook: "Facebook",
+                    social_instagram: "Instagram",
+                    social_youtube: "YouTube"
+                }
+            };
+
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+
+                const langButton = document.querySelector('.btn-lang');
+                if (langButton) {
+                    if (lang === 'es') {
+                        langButton.textContent = 'EN';
+                        langButton.setAttribute('aria-label', 'Switch to English');
+                    } else {
+                        langButton.textContent = 'ES';
+                        langButton.setAttribute('aria-label', 'Switch to Spanish');
+                    }
+                }
+
+                document.querySelectorAll('.english-content').forEach(el => {
+                    el.style.display = (lang === 'en') ? 'block' : 'none';
+                });
+                document.querySelectorAll('.spanish-content').forEach(el => {
+                    el.style.display = (lang === 'es') ? 'block' : 'none';
+                });
+
+                localStorage.setItem('preferredLanguage', lang);
+            };
+
+            const storedLang = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(storedLang);
+
+            const langButton = document.querySelector('.btn-lang');
+            if (langButton) {
+                langButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const currentLang = document.documentElement.lang;
+                    const newLang = (currentLang === 'en') ? 'es' : 'en';
+                    setLanguage(newLang);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
