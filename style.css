@@ -621,6 +621,11 @@ main {
     width: 100%;
     display: block; /* Prevents extra space below the image */
 }
+@media (min-width: 993px) {
+  .grid-3-col .ministry-card:last-child:nth-child(3n + 1) {
+    grid-column-start: 2;
+  }
+}
 
 
 /* Ensure info cards are at the bottom of the hero section when not scrolled */
