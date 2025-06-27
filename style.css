@@ -603,6 +603,24 @@ main {
     padding-bottom: 6rem;
 }
 
+/* --- 8. MINISTRIES SECTION --- */
+.ministry-card {
+    background: var(--color-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.ministry-card img {
+    width: 100%;
+    display: block; /* Prevents extra space below the image */
+}
 
 
 /* Ensure info cards are at the bottom of the hero section when not scrolled */
