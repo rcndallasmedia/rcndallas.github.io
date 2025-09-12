@@ -786,6 +786,13 @@ button:focus,
         height: 120px;
     }
     
+    .event-image {
+        height: 250px;
+        object-fit: contain;
+        object-position: center;
+        background-color: #f8f9fa;
+    }
+    
 }
 
 .english-content { display: block; }
