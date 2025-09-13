@@ -612,6 +612,18 @@ button:focus,
 }
 
 /* --- 7. RESPONSIVE DESIGN --- */
+
+/* Desktop Event Card - Show on larger screens */
+@media (min-width: 993px) {
+    .desktop-event {
+        display: block;
+    }
+    
+    .mobile-event-card {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .navbar { height: 60px; }
     .logo img { height: 30px; }
@@ -709,18 +721,14 @@ button:focus,
     .about-image { order: 1; }
     .section-title.align-left { text-align: center; }
     
-    .event-card {
-        max-width: 100%;
-        margin: 0 1rem;
+    /* Hide desktop event card on mobile */
+    .desktop-event {
+        display: none;
     }
-    .event-image {
-        height: 300px;
-    }
-    .event-content {
-        padding: 1.5rem;
-    }
-    .event-content h3 {
-        font-size: 1.5rem;
+    
+    /* Show mobile event card on mobile */
+    .mobile-event-card {
+        display: block;
     }
 }
 
@@ -753,18 +761,6 @@ button:focus,
         margin-bottom: 1rem;
     }
     
-    .event-card {
-        margin: 0 0.5rem;
-    }
-    .event-image {
-        height: 250px;
-    }
-    .event-content {
-        padding: 1rem;
-    }
-    .event-content h3 {
-        font-size: 1.3rem;
-    }
     
     .modal-content {
         margin: 1% auto;
@@ -786,12 +782,6 @@ button:focus,
         height: 120px;
     }
     
-    .event-image {
-        height: 250px;
-        object-fit: contain;
-        object-position: center;
-        background-color: #f8f9fa;
-    }
     
 }
 
@@ -870,6 +860,68 @@ main {
     color: var(--color-grey);
     margin-bottom: 2rem;
     font-style: italic;
+}
+
+/* Mobile Event Card Styles */
+.mobile-event-card {
+    display: none;
+    background: var(--color-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+.mobile-event-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.mobile-event-header h3 {
+    color: var(--color-primary-start);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-event-theme {
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.mobile-event-details {
+    margin-bottom: 1.5rem;
+}
+
+.mobile-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.mobile-detail-label {
+    font-size: 1.1rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+.mobile-detail-item span:last-child {
+    color: var(--color-grey);
+    flex: 1;
+}
+
+.mobile-register-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 1rem;
 }
 
 /* --- 9. MINISTRIES SECTION --- */
