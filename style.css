@@ -825,7 +825,7 @@ main {
 
 .event-image {
     width: 100%;
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     object-position: center top;
     display: block;
@@ -868,53 +868,56 @@ main {
     background: var(--color-light);
     border-radius: var(--radius);
     box-shadow: var(--shadow-soft);
-    padding: 1.5rem;
-    margin: 0 auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 400px;
-    text-align: left;
+    margin: 0 auto;
 }
 
-.mobile-event-header {
+.mobile-event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.mobile-event-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.mobile-event-content {
+    padding: 1.5rem;
     text-align: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--bg-light);
 }
 
-.mobile-event-header h3 {
+.mobile-event-content h3 {
     color: var(--color-primary-start);
+    margin-bottom: 0.75rem;
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
 }
 
 .mobile-event-theme {
     font-weight: 600;
     color: var(--color-dark);
+    margin-bottom: 0.5rem;
     font-size: 1rem;
-    margin: 0;
 }
 
-.mobile-event-details {
-    margin-bottom: 1.5rem;
-}
-
-.mobile-detail-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
+.mobile-event-dates {
+    font-weight: 500;
+    color: var(--color-grey);
+    margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
 
-.mobile-detail-label {
-    font-size: 1.1rem;
-    min-width: 24px;
-    text-align: center;
-}
-
-.mobile-detail-item span:last-child {
+.mobile-event-speakers {
     color: var(--color-grey);
-    flex: 1;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
 }
 
 .mobile-register-btn {
