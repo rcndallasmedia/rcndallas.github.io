@@ -723,16 +723,25 @@ button:focus,
     
     /* Hide desktop event card on mobile */
     .desktop-event {
-        display: none;
+        display: none !important;
     }
     
     /* Show mobile event card on mobile */
     .mobile-event-card {
-        display: block;
+        display: block !important;
     }
 }
 
 @media (max-width: 768px) {
+    /* Ensure mobile event card shows on smaller screens too */
+    .desktop-event {
+        display: none !important;
+    }
+    
+    .mobile-event-card {
+        display: block !important;
+    }
+    
     .hero-info-cards {
         position: static; /* Moved here from global scope */
         flex-direction: column;
