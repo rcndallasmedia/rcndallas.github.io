@@ -591,7 +591,27 @@ button:focus,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.anchor-scripture-card {
+    margin: 0 auto 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.scripture-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scripture-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .social-links {
