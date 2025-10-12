@@ -86,7 +86,7 @@
                         <p class="event-theme" data-i18n="conference_theme">Theme: The Philanthropy of Jesus</p>
                         <p class="event-dates" data-i18n="conference_dates">October 31st & November 1st, 2025</p>
                         <p class="event-speakers" data-i18n="conference_speakers">Featuring Dr. Arome Osayi & Reverend Philip Gbir</p>
-                        <a href="https://dallasapostolicconference.eventbrite.com" target="_blank" class="btn btn-primary" data-i18n="btn_register_now">Register Now!</a>
+                        <a href="https://dallasapostolicconference.eventbrite.com" target="_blank" class="btn btn-primary" data-i18n="btn_register_now" onclick="trackClick('register_desktop')">Register Now!</a>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                         <p class="mobile-event-theme" data-i18n="conference_theme">Theme: The Philanthropy of Jesus</p>
                         <p class="mobile-event-dates" data-i18n="conference_dates">October 31st & November 1st, 2025</p>
                         <p class="mobile-event-speakers" data-i18n="conference_speakers">Featuring Dr. Arome Osayi & Reverend Philip Gbir</p>
-                        <a href="https://dallasapostolicconference.eventbrite.com" target="_blank" class="btn btn-primary mobile-register-btn" data-i18n="btn_register_now">Register Now!</a>
+                        <a href="https://dallasapostolicconference.eventbrite.com" target="_blank" class="btn btn-primary mobile-register-btn" data-i18n="btn_register_now" onclick="trackClick('register_mobile')">Register Now!</a>
                     </div>
                 </div>
             </div>
@@ -266,6 +266,75 @@
 
     </main>
 
+    <!-- Analytics Dashboard Button (Admin Only - Hidden) -->
+    <div id="analytics-toggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 1001; display: none;">
+        <button onclick="toggleAnalytics()" style="background: var(--gradient-primary); color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            📊 Analytics
+        </button>
+    </div>
+
+    <!-- Analytics Dashboard Modal -->
+    <div id="analyticsModal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close" onclick="closeAnalytics()">&times;</span>
+            <h3>📊 Dallas Apostolic Conference Analytics</h3>
+            
+            <div id="analytics-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+                    <div class="analytics-card" style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+                        <h4 style="color: var(--color-primary-start); margin-bottom: 0.5rem;">Desktop Register</h4>
+                        <div id="register-desktop-count" style="font-size: 2rem; font-weight: bold; color: var(--color-dark);">0</div>
+                        <p style="color: var(--color-grey); font-size: 0.9rem;">Clicks</p>
+                    </div>
+                    <div class="analytics-card" style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+                        <h4 style="color: var(--color-primary-start); margin-bottom: 0.5rem;">Mobile Register</h4>
+                        <div id="register-mobile-count" style="font-size: 2rem; font-weight: bold; color: var(--color-dark);">0</div>
+                        <p style="color: var(--color-grey); font-size: 0.9rem;">Clicks</p>
+                    </div>
+                    <div class="analytics-card" style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+                        <h4 style="color: var(--color-primary-start); margin-bottom: 0.5rem;">PayPal QR</h4>
+                        <div id="qr-paypal-count" style="font-size: 2rem; font-weight: bold; color: var(--color-dark);">0</div>
+                        <p style="color: var(--color-grey); font-size: 0.9rem;">Clicks</p>
+                    </div>
+                    <div class="analytics-card" style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); text-align: center;">
+                        <h4 style="color: var(--color-primary-start); margin-bottom: 0.5rem;">Cash App QR</h4>
+                        <div id="qr-cashapp-count" style="font-size: 2rem; font-weight: bold; color: var(--color-dark);">0</div>
+                        <p style="color: var(--color-grey); font-size: 0.9rem;">Clicks</p>
+                    </div>
+                </div>
+                
+                <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); margin-top: 2rem;">
+                    <h4 style="color: var(--color-primary-start); margin-bottom: 1rem;">📈 Total Registration Attempts</h4>
+                    <div id="total-registrations" style="font-size: 3rem; font-weight: bold; color: var(--color-primary-start); text-align: center;">0</div>
+                    <p style="text-align: center; color: var(--color-grey); margin-top: 0.5rem;">Desktop + Mobile Clicks</p>
+                </div>
+
+                <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius); margin-top: 1rem;">
+                    <h4 style="color: var(--color-primary-start); margin-bottom: 1rem;">🔄 QR Code Usage</h4>
+                    <div id="total-qr-clicks" style="font-size: 3rem; font-weight: bold; color: var(--color-primary-start); text-align: center;">0</div>
+                    <p style="text-align: center; color: var(--color-grey); margin-top: 0.5rem;">PayPal + Cash App Clicks</p>
+                </div>
+
+                <div style="margin-top: 2rem; text-align: center;">
+                    <button onclick="exportAnalytics()" style="background: var(--gradient-secondary); color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold; margin-right: 1rem;">
+                        📥 Export Data
+                    </button>
+                    <button onclick="resetAnalytics()" style="background: #dc3545; color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold;" onmouseover="this.style.background='#c82333'" onmouseout="this.style.background='#dc3545'">
+                        🔄 Reset Data
+                    </button>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1rem; background: #e3f2fd; border-radius: var(--radius); border-left: 4px solid #2196f3;">
+                    <p style="color: #1565c0; margin: 0; font-size: 0.9rem;">
+                        <strong>💡 Admin Access:</strong> To access this dashboard, visit your website with <code>?admin=analytics</code> at the end of the URL. 
+                        This analytics dashboard tracks clicks on the Dallas Apostolic Conference registration buttons and QR codes. 
+                        Data is stored locally in your browser and persists between sessions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Ways to Give Modal -->
     <div id="giveModal" class="modal">
         <div class="modal-content ways-to-give">
@@ -293,7 +362,7 @@
                         <p class="qr-email">rcndallastx@gmail.com</p>
                         <p class="qr-scan-text">Scan to pay RCNDallas Texas</p>
                         <p class="qr-label">PayPal</p>
-                        <a href="https://www.paypal.com/qrcodes/p2pqrc/B3BUWRKT64JYA" target="_blank" class="btn btn-primary btn-small">Open PayPal</a>
+                        <a href="https://www.paypal.com/qrcodes/p2pqrc/B3BUWRKT64JYA" target="_blank" class="btn btn-primary btn-small" onclick="trackClick('qr_paypal')">Open PayPal</a>
                     </div>
                     
                     <div class="qr-card">
@@ -301,7 +370,7 @@
                         <p class="cash-app-handle">$rcndallas</p>
                         <p class="qr-scan-text">Scan to pay RCNDallas Texas</p>
                         <p class="qr-label">Cash App</p>
-                        <a href="https://cash.app/$rcndallas" target="_blank" class="btn btn-secondary btn-small">Open Cash App</a>
+                        <a href="https://cash.app/$rcndallas" target="_blank" class="btn btn-secondary btn-small" onclick="trackClick('qr_cashapp')">Open Cash App</a>
                     </div>
                 </div>
             </div>
@@ -574,6 +643,151 @@
                     modal.style.display = 'none';
                 }
             };
+
+            // --- Analytics and Click Tracking Functions ---
+            window.trackClick = function(action) {
+                // Get existing data or initialize
+                let analyticsData = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                
+                // Initialize counters if they don't exist
+                if (!analyticsData.register_desktop) analyticsData.register_desktop = 0;
+                if (!analyticsData.register_mobile) analyticsData.register_mobile = 0;
+                if (!analyticsData.qr_paypal) analyticsData.qr_paypal = 0;
+                if (!analyticsData.qr_cashapp) analyticsData.qr_cashapp = 0;
+                
+                // Increment the appropriate counter
+                if (analyticsData.hasOwnProperty(action)) {
+                    analyticsData[action]++;
+                    analyticsData.lastUpdated = new Date().toISOString();
+                    
+                    // Save back to localStorage
+                    localStorage.setItem('dallasConferenceAnalytics', JSON.stringify(analyticsData));
+                    
+                    // Update the display if analytics modal is open
+                    updateAnalyticsDisplay();
+                    
+                    // Optional: Log to console for debugging
+                    console.log(`Tracked click: ${action} (Total: ${analyticsData[action]})`);
+                }
+            };
+
+            window.updateAnalyticsDisplay = function() {
+                const data = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                
+                // Update individual counters
+                document.getElementById('register-desktop-count').textContent = data.register_desktop || 0;
+                document.getElementById('register-mobile-count').textContent = data.register_mobile || 0;
+                document.getElementById('qr-paypal-count').textContent = data.qr_paypal || 0;
+                document.getElementById('qr-cashapp-count').textContent = data.qr_cashapp || 0;
+                
+                // Update totals
+                const totalRegistrations = (data.register_desktop || 0) + (data.register_mobile || 0);
+                const totalQRClicks = (data.qr_paypal || 0) + (data.qr_cashapp || 0);
+                
+                document.getElementById('total-registrations').textContent = totalRegistrations;
+                document.getElementById('total-qr-clicks').textContent = totalQRClicks;
+            };
+
+            window.toggleAnalytics = function() {
+                const modal = document.getElementById('analyticsModal');
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                } else {
+                    modal.style.display = 'block';
+                    updateAnalyticsDisplay(); // Refresh data when opening
+                }
+            };
+
+            window.closeAnalytics = function() {
+                document.getElementById('analyticsModal').style.display = 'none';
+            };
+
+            window.exportAnalytics = function() {
+                const data = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                const exportData = {
+                    ...data,
+                    exportDate: new Date().toISOString(),
+                    summary: {
+                        totalRegistrations: (data.register_desktop || 0) + (data.register_mobile || 0),
+                        totalQRClicks: (data.qr_paypal || 0) + (data.qr_cashapp || 0),
+                        desktopRegistrations: data.register_desktop || 0,
+                        mobileRegistrations: data.register_mobile || 0,
+                        paypalQRClicks: data.qr_paypal || 0,
+                        cashAppQRClicks: data.qr_cashapp || 0
+                    }
+                };
+                
+                // Create and download CSV file
+                const csvContent = [
+                    ['Metric', 'Count'],
+                    ['Desktop Registrations', data.register_desktop || 0],
+                    ['Mobile Registrations', data.register_mobile || 0],
+                    ['Total Registrations', (data.register_desktop || 0) + (data.register_mobile || 0)],
+                    ['PayPal QR Clicks', data.qr_paypal || 0],
+                    ['Cash App QR Clicks', data.qr_cashapp || 0],
+                    ['Total QR Clicks', (data.qr_paypal || 0) + (data.qr_cashapp || 0)],
+                    ['Export Date', new Date().toISOString()]
+                ].map(row => row.join(',')).join('\n');
+                
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `dallas-conference-analytics-${new Date().toISOString().split('T')[0]}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                alert('Analytics data exported successfully!');
+            };
+
+            window.resetAnalytics = function() {
+                if (confirm('Are you sure you want to reset all analytics data? This action cannot be undone.')) {
+                    localStorage.removeItem('dallasConferenceAnalytics');
+                    updateAnalyticsDisplay();
+                    alert('Analytics data has been reset.');
+                }
+            };
+
+            // Check for admin access via URL parameter
+            function checkAdminAccess() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const adminParam = urlParams.get('admin');
+                
+                if (adminParam === 'analytics') {
+                    // Show analytics button for admin access
+                    document.getElementById('analytics-toggle').style.display = 'block';
+                    
+                    // Optional: Add a subtle indicator that admin mode is active
+                    const indicator = document.createElement('div');
+                    indicator.id = 'admin-indicator';
+                    indicator.style.cssText = `
+                        position: fixed;
+                        top: 10px;
+                        left: 10px;
+                        background: rgba(106, 63, 219, 0.9);
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 15px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        z-index: 1002;
+                        font-family: var(--font-family);
+                    `;
+                    indicator.textContent = '🔓 Admin Mode';
+                    document.body.appendChild(indicator);
+                    
+                    // Remove URL parameter from browser history for security
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }
+            }
+
+            // Initialize analytics display on page load
+            updateAnalyticsDisplay();
+            
+            // Check for admin access
+            checkAdminAccess();
         });
     </script>
 </body>
