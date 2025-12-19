@@ -216,26 +216,75 @@
         <p class="section-subtitle" data-i18n="ministries_subtitle">Discover the various ways to connect, serve, and grow within our church family.</p>
         
         <div class="grid-3-col">
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/administration.jpg" alt="RCN Dallas Administration Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/administration-flip.jpg" alt="RCN Dallas Administration Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/choir.jpg" alt="RCN Dallas Choir Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/choir-flip.jpg" alt="RCN Dallas Choir Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/evangelism.jpg" alt="RCN Dallas Evangelism & Outreach Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/evangelism-flip.jpg" alt="RCN Dallas Evangelism & Outreach Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/hospitality.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/hospitality-flip.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/media.jpg" alt="RCN Dallas Media Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/media-flip.jpg" alt="RCN Dallas Media Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/protocol.jpg" alt="RCN Dallas Protocol Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/protocol-flip.jpg" alt="RCN Dallas Protocol Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
-            <div class="ministry-card">
+            <div class="ministry-flip-card" tabindex="0">
+                <div class="ministry-flip-card-inner">
+                    <div class="ministry-flip-card-front">
                 <img src="images/ministries/usher.jpg" alt="RCN Dallas Usher Ministry" loading="lazy">
+                    </div>
+                    <div class="ministry-flip-card-back">
+                        <img src="images/ministries/usher-flip.jpg" alt="RCN Dallas Usher Ministry - Department Photo" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -788,6 +837,33 @@
             
             // Check for admin access
             checkAdminAccess();
+
+            // Ministry flip card functionality
+            const ministryFlipCards = document.querySelectorAll('.ministry-flip-card');
+            
+            ministryFlipCards.forEach(card => {
+                // Handle click/tap events
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+                
+                // Handle keyboard accessibility (Enter and Space)
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.classList.toggle('flipped');
+                    }
+                });
+                
+                // Prevent flipping on image click events (bubbling)
+                const images = card.querySelectorAll('img');
+                images.forEach(img => {
+                    img.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        card.classList.toggle('flipped');
+                    });
+                });
+            });
         });
     </script>
 </body>

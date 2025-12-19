@@ -957,25 +957,58 @@ main {
 }
 
 /* --- 9. MINISTRIES SECTION --- */
-.ministry-card {
-    background: var(--color-light);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ministry-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.ministry-card img {
+.ministry-flip-card {
+    background-color: transparent;
     width: 100%;
-    display: block; /* Prevents extra space below the image */
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
 }
+
+.ministry-flip-card:focus {
+    outline: 2px solid var(--color-primary-start);
+    outline-offset: 4px;
+    border-radius: var(--radius);
+}
+
+.ministry-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.ministry-flip-card.flipped .ministry-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.ministry-flip-card-front,
+.ministry-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.ministry-flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.ministry-flip-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 @media (min-width: 993px) {
-  .grid-3-col .ministry-card:last-child:nth-child(3n + 1) {
+  .grid-3-col .ministry-flip-card:last-child:nth-child(3n + 1) {
     grid-column-start: 2;
   }
 }
