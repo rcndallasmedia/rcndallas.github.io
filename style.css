@@ -956,6 +956,23 @@ main {
     font-size: 1rem;
 }
 
+/* No Events Message */
+.no-events-message {
+    background: var(--color-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    padding: 3rem 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.no-events-message p {
+    color: var(--color-grey);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* --- 9. MINISTRIES SECTION --- */
 .ministry-flip-card {
     background-color: transparent;
