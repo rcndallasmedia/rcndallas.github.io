@@ -6,13 +6,15 @@
     <title>RCN Dallas - Remnant Christian Network</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Link to our stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script type="module" src="/src/main.ts"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link" data-i18n="skip_to_main_content">Skip to main content</a>
@@ -21,13 +23,13 @@
     <header class="main-header">
         <nav class="navbar container" aria-label="Main navigation">
             <!-- Logo -->
-            <a href="/" class="logo">
-                <img src="/images/rcn-dallas-logo.png" alt="RCN Dallas Logo">
+            <a href="index.html" class="logo">
+                <img src="images/rcn-dallas-logo.png" alt="RCN Dallas Logo">
             </a>
 
             <!-- Main Navigation Links -->
             <ul class="nav-links-main">
-                <li><a href="/" class="active" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
                 <li><a href="#new-to-rcn-section" data-i18n="nav_im_new">I'm New</a></li>
                 <li><a href="#about-rcn-section" data-i18n="nav_about_us">About Us</a></li>
                 <li><a href="#messages-teachings-section" data-i18n="nav_sermons">Sermons</a></li>
@@ -58,16 +60,14 @@
                 <p class="tagline" data-i18n="rcn_tagline">Striving for the Rebirth of Apostolic Christianity</p>
                 <a href="#prayer-services-section" class="btn btn-primary" data-i18n="join_us_sunday">Join Us In Person</a>
             </div>
-            <div class="hero-info-dock" id="prayer-services-section">
-                <div class="hero-info-cards">
-                    <div class="info-card">
-                        <img src="/images/icon-prayer.png" alt="" width="28" height="28">
-                        <span data-i18n="prayer_services_info">10-Hour Prayer Services: 1st Saturday of Month | 7AM-5PM</span>
-                    </div>
-                    <div class="info-card">
-                        <img src="/images/icon-worship.png" alt="" width="28" height="28">
-                        <span data-i18n="worship_info">5-Hour Prayer Services: 4th Saturday of Month | 8AM-1PM</span>
-                    </div>
+            <div class="hero-info-cards" id="prayer-services-section">
+                <div class="info-card">
+                    <img src="images/icon-prayer.png" alt="Prayer Icon">
+                    <span data-i18n="prayer_services_info">10-Hour Prayer Services: 1st Saturday of Month | 7AM-5PM</span>
+                </div>
+                <div class="info-card">
+                    <img src="images/icon-worship.png" alt="Worship Icon">
+                    <span data-i18n="worship_info">5-Hour Prayer Services: 4th Saturday of Month | 8AM-1PM</span>
                 </div>
             </div>
         </section>
@@ -76,7 +76,20 @@
         <section class="page-section bg-light" id="current-campaigns-section">
             <div class="container">
                 <h2 class="section-title" data-i18n="section_title_campaigns">Current Campaigns</h2>
-                <div class="grid-2-col" id="campaigns-root"></div>
+                <div class="grid-2-col">
+                    <div class="campaign-card style-2">
+                        <span class="campaign-tag" data-i18n="campaign_active_tag">Active Campaign</span>
+                        <h3 data-i18n="campaign_promise_title">Midday Prayers: Every Day at Noon</h3>
+                        <p data-i18n="campaign_promise_desc">Join us daily at 12PM CDT for powerful midday prayers on Zoom.</p>
+                        <a href="https://chat.whatsapp.com/LNBlcBaH5XF3JwosqkcpNJ?mode=gi_t" class="btn btn-light" data-i18n="btn_join_now" target="_blank">Join Now</a>
+                    </div>
+                    <div class="campaign-card">
+                        <span class="campaign-tag" data-i18n="campaign_active_tag">Active Campaign</span>
+                        <h3 data-i18n="campaign_100_days_title">Nightly Prayer Services</h3>
+                        <p data-i18n="campaign_100_days_desc">Join us in seeking God's face in prayer every night at 11PM CDT on Zoom</p>
+                        <a href="https://chat.whatsapp.com/LNBlcBaH5XF3JwosqkcpNJ?mode=gi_t" class="btn btn-light" data-i18n="btn_join_now" target="_blank">Join Now</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -87,21 +100,21 @@
                 <p class="section-subtitle" data-i18n="new_to_rcn_subtitle">We're excited to welcome you into our church family. Here's everything you need to know for your first visit.</p>
                 <div class="grid-3-col">
                     <div class="visitor-card">
-                    <img src="/images/visit-location.jpg" alt="Exterior view of RCN Dallas church building" class="visitor-card-image" loading="lazy">
+                    <img src="images/visit-location.jpg" alt="Exterior view of RCN Dallas church building" class="visitor-card-image" loading="lazy">
                         <div class="visitor-card-content">
                         <h4 data-i18n="new_location_time_title">Location & Time</h4>
                         <p data-i18n="new_location_time_desc">Join us for worship on the 1st and 4th Saturdays of the month from 7AM-5PM</p>
                         </div>
                     </div>
                     <div class="visitor-card">
-                    <img src="/images/visit-prayer.png" alt="Establishing Priesthood — Wednesday night service with Rev. Philip Obir, live on Zoom" class="visitor-card-image" loading="lazy">
+                    <img src="images/visit-prayer.jpg" alt="Congregation participating in a prayer service" class="visitor-card-image" loading="lazy">
                         <div class="visitor-card-content">
                         <h4 data-i18n="new_prayer_services_title">Mid week services</h4>
                         <p data-i18n="new_prayer_services_desc">Join us midweek for services every Wednesday at 10PM via Zoom</p>
                         </div>
                     </div>
                     <div class="visitor-card">
-                        <img src="/images/visit-fellowship.jpg" alt="Church community in fellowship and conversation" class="visitor-card-image" loading="lazy">
+                        <img src="images/visit-fellowship.jpg" alt="Church community in fellowship and conversation" class="visitor-card-image" loading="lazy">
                         <div class="visitor-card-content">
                             <h4 data-i18n="new_what_to_expect_title">What to Expect</h4>
                             <p data-i18n="new_what_to_expect_desc">Authentic worship, prayer, and fellowship in a welcoming community</p>
@@ -125,7 +138,7 @@
                         </ul>
                     </div>
                     <div class="about-image">
-                        <img src="/images/about-us-image.jpg" alt="Church community worshiping together in a sanctuary" loading="lazy">
+                        <img src="images/about-us-image.jpg" alt="Church community worshiping together in a sanctuary" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -136,8 +149,21 @@
             <div class="container text-center">
                 <h2 class="section-title" data-i18n="section_title_events">Upcoming Events</h2>
                 <p class="section-subtitle" data-i18n="events_subtitle">Stay up-to-date with our latest gatherings, special services, and community activities.</p>
-
-                <div class="grid-2-col" id="events-root"></div>
+                
+                <div class="grid-2-col">
+                    <div class="campaign-card">
+                        <span class="campaign-tag" data-i18n="event_one_accord_tag">Upcoming Event</span>
+                        <h3 data-i18n="event_one_accord_title">One Accord</h3>
+                        <p data-i18n="event_one_accord_desc">Join us for a powerful service with Rev. Philip Gbir on Saturday, April 4th, 2026 at 7AM. Location: 745 Brown Trail, Hurst, TX 76053</p>
+                        <a href="https://chat.whatsapp.com/LNBlcBaH5XF3JwosqkcpNJ?mode=gi_t" class="btn btn-light" data-i18n="btn_join_now" target="_blank">Join Now</a>
+                    </div>
+                    <div class="campaign-card style-2">
+                        <span class="campaign-tag" data-i18n="event_prayer_cruise_tag">Upcoming Event</span>
+                        <h3 data-i18n="event_prayer_cruise_title">5 Hour Prayer Cruise</h3>
+                        <p data-i18n="event_prayer_cruise_desc">Join us for a powerful 5-hour prayer service on Saturday, March 28th, 2026 from 8AM-1PM. Location: 745 Brown Trail, Hurst, TX 76053</p>
+                        <a href="https://chat.whatsapp.com/LNBlcBaH5XF3JwosqkcpNJ?mode=gi_t" class="btn btn-light" data-i18n="btn_join_now" target="_blank">Join Now</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -145,7 +171,32 @@
         <section class="page-section" id="messages-teachings-section">
             <div class="container">
                 <h2 class="section-title" data-i18n="section_title_messages">Messages & Teachings</h2>
-                <div class="grid-3-col" id="messages-root"></div>
+                <div class="grid-3-col">
+                    <div class="message-card">
+                        <img src="images/message-1.jpg" alt="Thumbnail for 'The Journey of Intentionality' sermon" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_intentionality_title">The Journey of Intentionality</h4>
+                            <p data-i18n="message_intentionality_desc">Understanding the foundation of our prayer life</p>
+                            <a href="https://youtu.be/eRPcfmZ-Hd4" target="_blank" class="message-link" data-i18n="btn_watch_now">Watch Now</a>
+                        </div>
+                    </div>
+                    <div class="message-card">
+                        <img src="images/message-2.jpg" alt="Thumbnail for 'The Angels are Singing Halle' sermon" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_angels_title">The Angels are Singing Halle</h4>
+                            <p data-i18n="message_angels_desc">Enjoy hearing RCN Dallas' very own Pastor Phillip, as he ministers powerfully at one of their recent 10 hour prayer service.</p>
+                            <a href="https://youtu.be/aXep6S4634w" target="_blank" class="message-link" data-i18n="btn_listen_now">Listen Now</a>
+                        </div>
+                    </div>
+                    <div class="message-card">
+                        <img src="images/message-3.jpg" alt="Thumbnail for 'Healing at Philanthropy of Jesus Service' recap" loading="lazy">
+                        <div class="message-content">
+                            <h4 data-i18n="message_healing_title">Healing at Philanthropy of Jesus Service</h4>
+                            <p data-i18n="message_healing_desc">Recap of the powerful healing that took place at the Philanthropy of Jesus service with Pastor Philip Gbir.</p>
+                            <a href="https://youtu.be/0TR-hn4P6kk" target="_blank" class="message-link" data-i18n="btn_download">Download</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -159,70 +210,70 @@
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/administration.jpg" alt="RCN Dallas Administration Ministry" loading="lazy">
+                <img src="images/ministries/administration.jpg" alt="RCN Dallas Administration Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/administration-flip.jpg" alt="RCN Dallas Administration Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/administration-flip.jpg" alt="RCN Dallas Administration Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/choir.jpg" alt="RCN Dallas Choir Ministry" loading="lazy">
+                <img src="images/ministries/choir.jpg" alt="RCN Dallas Choir Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/choir-flip.jpg" alt="RCN Dallas Choir Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/choir-flip.jpg" alt="RCN Dallas Choir Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/evangelism.jpg" alt="RCN Dallas Evangelism & Outreach Ministry" loading="lazy">
+                <img src="images/ministries/evangelism.jpg" alt="RCN Dallas Evangelism & Outreach Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/evangelism-flip.jpg" alt="RCN Dallas Evangelism & Outreach Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/evangelism-flip.jpg" alt="RCN Dallas Evangelism & Outreach Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/hospitality.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry" loading="lazy">
+                <img src="images/ministries/hospitality.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/hospitality-flip.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/hospitality-flip.jpg" alt="RCN Dallas Hospitality & Sanctuary Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/media.jpg" alt="RCN Dallas Media Ministry" loading="lazy">
+                <img src="images/ministries/media.jpg" alt="RCN Dallas Media Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/media-flip.jpg" alt="RCN Dallas Media Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/media-flip.jpg" alt="RCN Dallas Media Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/protocol.jpg" alt="RCN Dallas Protocol Ministry" loading="lazy">
+                <img src="images/ministries/protocol.jpg" alt="RCN Dallas Protocol Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/protocol-flip.jpg" alt="RCN Dallas Protocol Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/protocol-flip.jpg" alt="RCN Dallas Protocol Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="ministry-flip-card" tabindex="0">
                 <div class="ministry-flip-card-inner">
                     <div class="ministry-flip-card-front">
-                <img src="/images/ministries/usher.jpg" alt="RCN Dallas Usher Ministry" loading="lazy">
+                <img src="images/ministries/usher.jpg" alt="RCN Dallas Usher Ministry" loading="lazy">
                     </div>
                     <div class="ministry-flip-card-back">
-                        <img src="/images/ministries/usher-flip.jpg" alt="RCN Dallas Usher Ministry - Department Photo" loading="lazy">
+                        <img src="images/ministries/usher-flip.jpg" alt="RCN Dallas Usher Ministry - Department Photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -237,13 +288,13 @@
                 <p class="section-subtitle" data-i18n="partner_subtitle">Your generosity helps us continue our mission to restore apostolic order and build God's kingdom through prayer, worship, and community.</p>
                 <div class="grid-2-col slim-gap">
                     <div class="partner-card">
-                        <img src="/images/icon-gift.png" class="partner-icon" alt="Gift icon">
+                        <img src="images/icon-gift.png" class="partner-icon" alt="Gift icon">
                         <h4 data-i18n="partner_onetime_title">One-Time Gift</h4>
                         <p data-i18n="partner_onetime_desc">Make a single donation to support our ministry and community outreach</p>
-                        <button type="button" class="btn btn-secondary" data-i18n="btn_give_now" id="give-modal-trigger">Give Now</button>
+                        <a href="#" class="btn btn-secondary" data-i18n="btn_give_now" onclick="openGiveModal(); return false;">Give Now</a>
                     </div>
                     <div class="partner-card">
-                        <img src="/images/icon-giving.png" class="partner-icon" alt="Hands giving icon">
+                        <img src="images/icon-giving.png" class="partner-icon" alt="Hands giving icon">
                         <h4 data-i18n="partner_monthly_title">Monthly Giving</h4>
                         <p data-i18n="partner_monthly_desc">Become a monthly partner and help us plan for consistent ministry impact</p>
                         <a href="mailto:rcndallastx@gmail.com?subject=Monthly Partnership Inquiry" class="btn btn-secondary" data-i18n="btn_partner_monthly">Partner Monthly</a>
@@ -257,15 +308,15 @@
 
     <!-- Analytics Dashboard Button (Admin Only - Hidden) -->
     <div id="analytics-toggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 1001; display: none;">
-        <button type="button" id="analytics-open" style="background: var(--gradient-primary); color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-            Analytics
+        <button onclick="toggleAnalytics()" style="background: var(--gradient-primary); color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            📊 Analytics
         </button>
     </div>
 
     <!-- Analytics Dashboard Modal -->
     <div id="analyticsModal" class="modal" style="display: none;">
         <div class="modal-content" style="max-width: 800px;">
-            <span class="close" data-close-analytics>&times;</span>
+            <span class="close" onclick="closeAnalytics()">&times;</span>
             <h3>📊 Dallas Apostolic Conference Analytics</h3>
             
             <div id="analytics-content">
@@ -305,11 +356,11 @@
                 </div>
 
                 <div style="margin-top: 2rem; text-align: center;">
-                    <button type="button" id="analytics-export" style="background: var(--gradient-secondary); color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold; margin-right: 1rem;">
-                        Export Data
+                    <button onclick="exportAnalytics()" style="background: var(--gradient-secondary); color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold; margin-right: 1rem;">
+                        📥 Export Data
                     </button>
-                    <button type="button" id="analytics-reset" style="background: #dc3545; color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold;">
-                        Reset Data
+                    <button onclick="resetAnalytics()" style="background: #dc3545; color: white; border: none; padding: 12px 24px; border-radius: 50px; cursor: pointer; font-weight: bold;" onmouseover="this.style.background='#c82333'" onmouseout="this.style.background='#dc3545'">
+                        🔄 Reset Data
                     </button>
                 </div>
 
@@ -327,7 +378,7 @@
     <!-- Ways to Give Modal -->
     <div id="giveModal" class="modal">
         <div class="modal-content ways-to-give">
-            <span class="close" data-close-give>&times;</span>
+            <span class="close" onclick="closeGiveModal()">&times;</span>
             <h3>Ways to Give</h3>
             
             <div class="bank-transfer-section">
@@ -347,19 +398,19 @@
                 <div class="qr-codes">
                     <div class="qr-card">
                         
-                        <img src="/images/paypal-qr.png" alt="PayPal QR Code" class="qr-code">
+                        <img src="images/paypal-qr.png" alt="PayPal QR Code" class="qr-code">
                         <p class="qr-email">rcndallastx@gmail.com</p>
                         <p class="qr-scan-text">Scan to pay RCNDallas Texas</p>
                         <p class="qr-label">PayPal</p>
-                        <a href="https://www.paypal.com/qrcodes/p2pqrc/B3BUWRKT64JYA" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-small" data-track-click="qr_paypal">Open PayPal</a>
+                        <a href="https://www.paypal.com/qrcodes/p2pqrc/B3BUWRKT64JYA" target="_blank" class="btn btn-primary btn-small" onclick="trackClick('qr_paypal')">Open PayPal</a>
                     </div>
                     
                     <div class="qr-card">
-                        <img src="/images/cash-app-qr.png" alt="Cash App QR Code" class="qr-code">
+                        <img src="images/cash-app-qr.png" alt="Cash App QR Code" class="qr-code">
                         <p class="cash-app-handle">$rcndallas</p>
                         <p class="qr-scan-text">Scan to pay RCNDallas Texas</p>
                         <p class="qr-label">Cash App</p>
-                        <a href="https://cash.app/$rcndallas" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small" data-track-click="qr_cashapp">Open Cash App</a>
+                        <a href="https://cash.app/$rcndallas" target="_blank" class="btn btn-secondary btn-small" onclick="trackClick('qr_cashapp')">Open Cash App</a>
                     </div>
                 </div>
             </div>
@@ -375,12 +426,440 @@
             </blockquote>
         </div>
         <div class="social-links">
-            <a href="https://www.instagram.com/rcndallastx?utm_source=ig_web_button_share_sheet&igsh=MW5zMnFiNjNxdWJmeA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-i18n="social_instagram">Instagram</a>
-            <a href="https://youtube.com/@rcndallastx?si=kjF3C1RigQNmNGIN" target="_blank" rel="noopener noreferrer" data-i18n="social_youtube">YouTube</a>
+            <a href="https://www.instagram.com/rcndallastx?utm_source=ig_web_button_share_sheet&igsh=MW5zMnFiNjNxdWJmeA==" target="_blank" aria-label="Instagram" data-i18n="social_instagram">Instagram</a>
+            <a href="https://youtube.com/@rcndallastx?si=kjF3C1RigQNmNGIN">YouTube</a>
         </div>
-        <p data-i18n="footer_text">© 2026 Remnant Christian Network. Made with ❤️.</p>
+        <p data-i18n="footer_text">© 2025 Remnant Christian Network. Made with ❤️.</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBurger = document.querySelector('.menu-burger');
+            const navLinksMain = document.querySelector('.nav-links-main');
+            const navActions = document.querySelector('.nav-actions');
 
+            menuBurger.addEventListener('click', () => {
+                navLinksMain.classList.toggle('nav-open');
+                navActions.classList.toggle('nav-open');
+                menuBurger.classList.toggle('open');
+                menuBurger.setAttribute('aria-expanded', navLinksMain.classList.contains('nav-open'));
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href').length > 1) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+
+                        if (targetElement) {
+                            if (navLinksMain.classList.contains('nav-open')) {
+                                navLinksMain.classList.remove('nav-open');
+                                navActions.classList.remove('nav-open');
+                                menuBurger.classList.remove('open');
+                                menuBurger.setAttribute('aria-expanded', false);
+                            }
+
+                            const headerHeight = document.querySelector('.main-header').offsetHeight;
+
+                            window.scrollTo({
+                                top: targetElement.offsetTop - headerHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // --- Language Switching Logic ---
+            const translations = {
+                en: {
+                    skip_to_main_content: "Skip to main content",
+                    nav_home: "Home",
+                    nav_im_new: "I'm New",
+                    nav_about_us: "About Us",
+                    nav_sermons: "Sermons",
+                    nav_ministries: "Ministries",
+                    nav_events: "Events",
+                    nav_give: "Give",
+                    lang_button_text: "ES",
+                    rcn_dallas_full_title: "Remnant Christian Network <span class=\"subtitle-hero\">Dallas, TX</span>",
+                    rcn_tagline: "Striving for the rebirth of Apostolic Christianity",
+                    join_us_sunday: "Join Us In Person",
+                    prayer_services_info: "10-Hour Prayer Services: 1st Saturday of Month | 7AM-5PM",
+                    worship_info: "5-Hour Prayer Services: 4th Saturday of Month | 8AM-1PM",
+                    section_title_campaigns: "Current Campaigns",
+                    campaign_active_tag: "Active Campaign",
+                    campaign_100_days_title: "Nightly Prayer Services",
+                    campaign_100_days_desc: "Join us in seeking God's face in prayer every night at 11PM CDT on Zoom",
+                    btn_learn_more: "Learn More",
+                    campaign_upcoming_tag: "Upcoming",
+                    campaign_promise_title: "Midday Prayers: Every Day at Noon",
+                    campaign_promise_desc: "Join us daily at 12PM CDT for powerful midday prayers on Zoom.",
+                    btn_join_now: "Join Now",
+                    section_title_new_to_rcn: "New to RCN Dallas?",
+                    new_to_rcn_subtitle: "We're excited to welcome you into our church family. Here's everything you need to know for your first visit.",
+                    new_location_time_title: "Location & Time",
+                    new_location_time_desc: "Join us for worship on the 1st and 4th Saturdays of the month from 7AM-5PM",
+                    new_prayer_services_title: "Mid week services",
+                    new_prayer_services_desc: "Join us midweek for services every Wednesday at 10PM via Zoom",
+                    new_what_to_expect_title: "What to Expect",
+                    new_what_to_expect_desc: "Authentic worship, prayer, and fellowship in a welcoming community",
+                    section_title_about_rcn: "About RCN Dallas",
+                    about_rcn_desc: "We are a community committed to striving for the rebirth of Apostolic Christianity through prayer, worship, and fellowship. Join us as we seek God's heart together and build a strong foundation of faith.",
+                    about_feature_apostolic: "Apostolic Foundation",
+                    about_feature_prayer_centered: "Prayer-Centered",
+                    about_feature_community_focus: "Community Focus",
+                    section_title_messages: "Messages & Teachings",
+                    message_intentionality_title: "The Journey of Intentionality",
+                    message_intentionality_desc: "Understanding the foundation of our prayer life",
+                    btn_watch_now: "Watch Now",
+                    message_angels_title: "The Angels are Singing Halle",
+                    message_angels_desc: "Enjoy hearing RCN Dallas' very own Pastor Phillip, as he ministers powerfully at one of their recent 10 hour prayer service.",
+                    btn_listen_now: "Listen Now",
+                    message_healing_title: "Healing at Philanthropy of Jesus Service",
+                    message_healing_desc: "Recap of the powerful healing that took place at the Philanthropy of Jesus service with Pastor Philip Gbir.",
+                    btn_download: "Download",
+                    section_title_ministries: "Our Ministries",
+                    ministries_subtitle: "Discover the various ways to connect, serve, and grow within our church family.",
+                    ministries_placeholder_en: "(Content for Ministries section will go here.)",
+                    ministries_placeholder_es: "(El contenido de la sección Ministerios irá aquí.)",
+                    section_title_events: "Upcoming Events",
+                    events_subtitle: "Stay up-to-date with our latest gatherings, special services, and community activities.",
+                    no_upcoming_events: "No upcoming events at this time. Check back soon for new gatherings and special services!",
+                    event_one_accord_tag: "Upcoming Event",
+                    event_one_accord_title: "One Accord",
+                    event_one_accord_desc: "Join us for a powerful service with Rev. Philip Gbir on Saturday, April 4th, 2026 at 7AM. Location: 745 Brown Trail, Hurst, TX 76053",
+                    event_prayer_cruise_tag: "Upcoming Event",
+                    event_prayer_cruise_title: "5 Hour Prayer Cruise",
+                    event_prayer_cruise_desc: "Join us for a powerful 5-hour prayer service on Saturday, March 28th, 2026 from 8AM-1PM. Location: 745 Brown Trail, Hurst, TX 76053",
+                    section_title_partner: "Partner With Us",
+                    partner_subtitle: "Your generosity helps us continue our mission to restore apostolic order and build God's kingdom through prayer, worship, and community.",
+                    partner_onetime_title: "One-Time Gift",
+                    partner_onetime_desc: "Make a single donation to support our ministry and community outreach",
+                    btn_give_now: "Give Now",
+                    btn_paypal: "PayPal",
+                    btn_cashapp: "Cash App",
+                    partner_monthly_title: "Monthly Giving",
+                    partner_monthly_desc: "Become a monthly partner and help us plan for consistent ministry impact",
+                    btn_partner_monthly: "Partner Monthly",
+                    partner_disclaimer: "RCN Dallas is a registered 501(c)(3) organization. All donations are tax-deductible.",
+                    footer_text: "© 2025 Remnant Christian Network. Made with ❤️.",
+                    social_instagram: "Instagram",
+                    social_youtube: "YouTube"
+                },
+                es: {
+                    skip_to_main_content: "Saltar al contenido principal",
+                    nav_home: "Inicio",
+                    nav_im_new: "Soy Nuevo",
+                    nav_about_us: "Nosotros",
+                    nav_sermons: "Sermones",
+                    nav_ministries: "Ministerios",
+                    nav_events: "Eventos",
+                    nav_give: "Donar",
+                    lang_button_text: "EN",
+                    rcn_dallas_full_title: "Red Cristiana Remanente <span class=\"subtitle-hero\">Dallas, TX</span>",
+                    rcn_tagline: "Luchando por el Renacimiento de la Cristiandad Apostólica",
+                    join_us_sunday: "Únete En Persona",
+                    prayer_services_info: "Servicios de Oración de 10 Horas: 1er Sábado del Mes | 7AM-5PM",
+                    worship_info: "Servicios de Oración de 5 Horas: 4to Sábado del Mes | 8AM-1PM",
+                    section_title_campaigns: "Campañas Actuales",
+                    campaign_active_tag: "Campaña Activa",
+                    campaign_100_days_title: "Servicios de Oración Nocturnos",
+                    campaign_100_days_desc: "Únete a nosotros en la búsqueda del rostro de Dios en oración cada noche a las 11PM CDT en Zoom",
+                    btn_learn_more: "Saber Más",
+                    campaign_upcoming_tag: "Próximo",
+                    campaign_promise_title: "Oraciones del Mediodía: Todos los Días al Mediodía",
+                    campaign_promise_desc: "Únase a nosotros todos los días a las 12PM CDT en Zoom para poderosas oraciones del mediodía.",
+                    btn_join_now: "Únete Ahora",
+                    section_title_new_to_rcn: "¿Nuevo en RCN Dallas?",
+                    new_to_rcn_subtitle: "Estamos emocionados de darle la bienvenida a nuestra familia de la iglesia. Aquí encontrará todo lo que necesita saber para su primera visita.",
+                    new_location_time_title: "Ubicación y Hora",
+                    new_location_time_desc: "Únase a nosotros para el culto el primer y cuarto sábado de cada mes de 7 AM a 5 PM",
+                    new_prayer_services_title: "Servicios de mitad de semana",
+                    new_prayer_services_desc: "Únase a nosotros a mitad de semana para los servicios todos los miércoles a las 10PM vía Zoom",
+                    new_what_to_expect_title: "Qué Esperar",
+                    new_what_to_expect_desc: "Culto auténtico, oración y compañerismo en una comunidad acogedora",
+                    section_title_about_rcn: "Acerca de RCN Dallas",
+                    about_rcn_desc: "Somos una comunidad comprometida con luchar por el renacimiento de la Cristiandad Apostólica a través de la oración, la adoración y el compañerismo. Únase a nosotros mientras buscamos el corazón de Dios juntos y construimos una sólida base de fe.",
+                    about_feature_apostolic: "Fundación Apostólica",
+                    about_feature_prayer_centered: "Centrado en la Oración",
+                    about_feature_community_focus: "Enfoque Comunitario",
+                    section_title_messages: "Mensajes y Enseñanzas",
+                    message_intentionality_title: "El Viaje de la Intencionalidad",
+                    message_intentionality_desc: "Comprendiendo el fundamento de nuestra vida de oración",
+                    btn_watch_now: "Ver Ahora",
+                    message_angels_title: "Los Ángeles Cantan Aleluya",
+                    message_angels_desc: "Disfrute escuchando al propio Pastor Phillip de RCN Dallas, mientras ministra poderosamente en uno de sus recientes servicios de oración de 10 horas.",
+                    btn_listen_now: "Escuchar Ahora",
+                    message_healing_title: "Sanidad en el Servicio de Filantropía de Jesús",
+                    message_healing_desc: "Recapitulación de la poderosa sanidad que tuvo lugar en el servicio de Filantropía de Jesús con el Pastor Philip Gbir.",
+                    btn_download: "Descargar",
+                    section_title_ministries: "Nuestros Ministerios",
+                    ministries_subtitle: "Descubre las diversas formas de conectar, servir y crecer dentro de nuestra familia de la iglesia.",
+                    ministries_placeholder_en: "(Content for Ministries section will go here.)",
+                    ministries_placeholder_es: "(El contenido de la sección Ministerios irá aquí.)",
+                    section_title_events: "Próximos Eventos",
+                    events_subtitle: "Manténgase al día con nuestras últimas reuniones, servicios especiales y actividades comunitarias.",
+                    no_upcoming_events: "No hay eventos próximos en este momento. ¡Vuelva pronto para nuevas reuniones y servicios especiales!",
+                    event_one_accord_tag: "Próximo Evento",
+                    event_one_accord_title: "Un Solo Acuerdo",
+                    event_one_accord_desc: "Únase a nosotros para un servicio poderoso con el Rev. Philip Gbir el sábado 4 de abril de 2026 a las 7AM. Ubicación: 745 Brown Trail, Hurst, TX 76053",
+                    event_prayer_cruise_tag: "Próximo Evento",
+                    event_prayer_cruise_title: "Crucero de Oración de 5 Horas",
+                    event_prayer_cruise_desc: "Únase a nosotros para un poderoso servicio de oración de 5 horas el sábado 28 de marzo de 2026 de 8AM-1PM. Ubicación: 745 Brown Trail, Hurst, TX 76053",
+                    section_title_partner: "Asóciate con Nosotros",
+                    partner_subtitle: "Su generosidad nos ayuda a continuar nuestra misión de restaurar el orden apostólico y construir el reino de Dios a través de la oración, la adoración y la comunidad.",
+                    partner_onetime_title: "Donación Única",
+                    partner_onetime_desc: "Haga una sola donación para apoyar nuestro ministerio y alcance comunitario",
+                    btn_give_now: "Donar Ahora",
+                    btn_paypal: "PayPal",
+                    btn_cashapp: "Cash App",
+                    partner_monthly_title: "Donación Mensual",
+                    partner_monthly_desc: "Conviértase en un socio mensual y ayúdenos a planificar un impacto ministerial constante",
+                    btn_partner_monthly: "Asociarse Mensualmente",
+                    partner_disclaimer: "RCN Dallas es una organización 501(c)(3) registrada. Todas las donaciones son deducibles de impuestos.",
+                    footer_text: "© 2025 Red Cristiana Remanente. Hecho con ❤️.",
+                    social_instagram: "Instagram",
+                    social_youtube: "YouTube"
+                }
+            };
+
+            const setLanguage = (lang) => {
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.innerHTML = translations[lang][key];
+                    }
+                });
+
+                const langButton = document.querySelector('.btn-lang');
+                if (langButton) {
+                    if (lang === 'es') {
+                        langButton.textContent = 'EN';
+                        langButton.setAttribute('aria-label', 'Switch to English');
+                    } else {
+                        langButton.textContent = 'ES';
+                        langButton.setAttribute('aria-label', 'Switch to Spanish');
+                    }
+                }
+
+                document.querySelectorAll('.english-content').forEach(el => {
+                    el.style.display = (lang === 'en') ? 'block' : 'none';
+                });
+                document.querySelectorAll('.spanish-content').forEach(el => {
+                    el.style.display = (lang === 'es') ? 'block' : 'none';
+                });
+
+                localStorage.setItem('preferredLanguage', lang);
+            };
+
+            const storedLang = localStorage.getItem('preferredLanguage') || 'en';
+            setLanguage(storedLang);
+
+            const langButton = document.querySelector('.btn-lang');
+            if (langButton) {
+                langButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const currentLang = document.documentElement.lang;
+                    const newLang = (currentLang === 'en') ? 'es' : 'en';
+                    setLanguage(newLang);
+                });
+            }
+
+            // Ways to Give Modal Functions
+            window.openGiveModal = function() {
+                document.getElementById('giveModal').style.display = 'block';
+            };
+
+            window.closeGiveModal = function() {
+                document.getElementById('giveModal').style.display = 'none';
+            };
+
+            // Close modal when clicking outside of it
+            window.onclick = function(event) {
+                const modal = document.getElementById('giveModal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+
+            // --- Analytics and Click Tracking Functions ---
+            window.trackClick = function(action) {
+                // Get existing data or initialize
+                let analyticsData = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                
+                // Initialize counters if they don't exist
+                if (!analyticsData.register_desktop) analyticsData.register_desktop = 0;
+                if (!analyticsData.register_mobile) analyticsData.register_mobile = 0;
+                if (!analyticsData.qr_paypal) analyticsData.qr_paypal = 0;
+                if (!analyticsData.qr_cashapp) analyticsData.qr_cashapp = 0;
+                
+                // Increment the appropriate counter
+                if (analyticsData.hasOwnProperty(action)) {
+                    analyticsData[action]++;
+                    analyticsData.lastUpdated = new Date().toISOString();
+                    
+                    // Save back to localStorage
+                    localStorage.setItem('dallasConferenceAnalytics', JSON.stringify(analyticsData));
+                    
+                    // Update the display if analytics modal is open
+                    updateAnalyticsDisplay();
+                    
+                    // Optional: Log to console for debugging
+                    console.log(`Tracked click: ${action} (Total: ${analyticsData[action]})`);
+                }
+            };
+
+            window.updateAnalyticsDisplay = function() {
+                const data = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                
+                // Update individual counters
+                document.getElementById('register-desktop-count').textContent = data.register_desktop || 0;
+                document.getElementById('register-mobile-count').textContent = data.register_mobile || 0;
+                document.getElementById('qr-paypal-count').textContent = data.qr_paypal || 0;
+                document.getElementById('qr-cashapp-count').textContent = data.qr_cashapp || 0;
+                
+                // Update totals
+                const totalRegistrations = (data.register_desktop || 0) + (data.register_mobile || 0);
+                const totalQRClicks = (data.qr_paypal || 0) + (data.qr_cashapp || 0);
+                
+                document.getElementById('total-registrations').textContent = totalRegistrations;
+                document.getElementById('total-qr-clicks').textContent = totalQRClicks;
+            };
+
+            window.toggleAnalytics = function() {
+                const modal = document.getElementById('analyticsModal');
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                } else {
+                    modal.style.display = 'block';
+                    updateAnalyticsDisplay(); // Refresh data when opening
+                }
+            };
+
+            window.closeAnalytics = function() {
+                document.getElementById('analyticsModal').style.display = 'none';
+            };
+
+            window.exportAnalytics = function() {
+                const data = JSON.parse(localStorage.getItem('dallasConferenceAnalytics') || '{}');
+                const exportData = {
+                    ...data,
+                    exportDate: new Date().toISOString(),
+                    summary: {
+                        totalRegistrations: (data.register_desktop || 0) + (data.register_mobile || 0),
+                        totalQRClicks: (data.qr_paypal || 0) + (data.qr_cashapp || 0),
+                        desktopRegistrations: data.register_desktop || 0,
+                        mobileRegistrations: data.register_mobile || 0,
+                        paypalQRClicks: data.qr_paypal || 0,
+                        cashAppQRClicks: data.qr_cashapp || 0
+                    }
+                };
+                
+                // Create and download CSV file
+                const csvContent = [
+                    ['Metric', 'Count'],
+                    ['Desktop Registrations', data.register_desktop || 0],
+                    ['Mobile Registrations', data.register_mobile || 0],
+                    ['Total Registrations', (data.register_desktop || 0) + (data.register_mobile || 0)],
+                    ['PayPal QR Clicks', data.qr_paypal || 0],
+                    ['Cash App QR Clicks', data.qr_cashapp || 0],
+                    ['Total QR Clicks', (data.qr_paypal || 0) + (data.qr_cashapp || 0)],
+                    ['Export Date', new Date().toISOString()]
+                ].map(row => row.join(',')).join('\n');
+                
+                const blob = new Blob([csvContent], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `dallas-conference-analytics-${new Date().toISOString().split('T')[0]}.csv`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                alert('Analytics data exported successfully!');
+            };
+
+            window.resetAnalytics = function() {
+                if (confirm('Are you sure you want to reset all analytics data? This action cannot be undone.')) {
+                    localStorage.removeItem('dallasConferenceAnalytics');
+                    updateAnalyticsDisplay();
+                    alert('Analytics data has been reset.');
+                }
+            };
+
+            // Check for admin access via URL parameter
+            function checkAdminAccess() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const adminParam = urlParams.get('admin');
+                
+                if (adminParam === 'analytics') {
+                    // Show analytics button for admin access
+                    document.getElementById('analytics-toggle').style.display = 'block';
+                    
+                    // Optional: Add a subtle indicator that admin mode is active
+                    const indicator = document.createElement('div');
+                    indicator.id = 'admin-indicator';
+                    indicator.style.cssText = `
+                        position: fixed;
+                        top: 10px;
+                        left: 10px;
+                        background: rgba(106, 63, 219, 0.9);
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 15px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        z-index: 1002;
+                        font-family: var(--font-family);
+                    `;
+                    indicator.textContent = '🔓 Admin Mode';
+                    document.body.appendChild(indicator);
+                    
+                    // Remove URL parameter from browser history for security
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                }
+            }
+
+            // Initialize analytics display on page load
+            updateAnalyticsDisplay();
+            
+            // Check for admin access
+            checkAdminAccess();
+
+            // Ministry flip card functionality
+            const ministryFlipCards = document.querySelectorAll('.ministry-flip-card');
+            
+            ministryFlipCards.forEach(card => {
+                // Handle click/tap events
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+                
+                // Handle keyboard accessibility (Enter and Space)
+                card.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.classList.toggle('flipped');
+                    }
+                });
+                
+                // Prevent flipping on image click events (bubbling)
+                const images = card.querySelectorAll('img');
+                images.forEach(img => {
+                    img.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        card.classList.toggle('flipped');
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
