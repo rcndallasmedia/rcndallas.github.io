@@ -904,6 +904,24 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
+.event-grid {
+    align-items: stretch;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.event-grid .event-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-flyer {
+    height: 440px;
+    object-fit: cover;
+    object-position: center top;
+    background: var(--bg-light);
+}
+
 .event-image {
     width: 100%;
     height: 500px;
