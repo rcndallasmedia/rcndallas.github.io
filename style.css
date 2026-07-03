@@ -346,6 +346,11 @@ button:focus,
     margin: 0 auto;
 }
 
+.campaign-grid {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 .campaign-tag {
     display: inline-block;
     background: rgba(255,255,255,0.18);
@@ -920,27 +925,6 @@ main {
     object-fit: cover;
     object-position: center top;
     background: var(--bg-light);
-}
-
-.campaign-feature {
-    max-width: 700px;
-}
-
-.campaign-event-card {
-    text-align: center;
-}
-
-.campaign-event-card .event-content {
-    padding: 2rem;
-}
-
-.campaign-flyer {
-    height: 560px;
-}
-
-.campaign-tag-light {
-    background: var(--color-panel);
-    color: var(--color-primary-end);
 }
 
 .event-image {
