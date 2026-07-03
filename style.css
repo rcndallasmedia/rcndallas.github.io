@@ -922,6 +922,27 @@ main {
     background: var(--bg-light);
 }
 
+.campaign-feature {
+    max-width: 700px;
+}
+
+.campaign-event-card {
+    text-align: center;
+}
+
+.campaign-event-card .event-content {
+    padding: 2rem;
+}
+
+.campaign-flyer {
+    height: 560px;
+}
+
+.campaign-tag-light {
+    background: var(--color-panel);
+    color: var(--color-primary-end);
+}
+
 .event-image {
     width: 100%;
     height: 500px;
