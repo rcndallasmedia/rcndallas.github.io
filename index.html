@@ -492,9 +492,10 @@
                             }
 
                             const headerHeight = document.querySelector('.main-header').offsetHeight;
+                            const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
 
                             window.scrollTo({
-                                top: targetElement.offsetTop - headerHeight,
+                                top: targetTop - headerHeight - 16,
                                 behavior: 'smooth'
                             });
                         }
