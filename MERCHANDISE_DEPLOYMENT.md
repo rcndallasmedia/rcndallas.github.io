@@ -1,13 +1,17 @@
-# Spiritual Capital merchandise storefront
+# 2nine merchandise storefront
 
-The merchandise storefront is served at https://rcndallas.com/spiritual-capital-merchandise/.
+The store is served at https://rcndallas.com/2ninestore/merchandise/.
+The former `/spiritual-capital-merchandise/` directory has been removed.
 
-This directory is the static output of the RCN Dallas Apparel Next.js project, built with:
+Build the storefront source with:
 
 ```sh
-NEXT_PUBLIC_BASE_PATH=/spiritual-capital-merchandise npm run build
+NEXT_PUBLIC_BASE_PATH=/2ninestore/merchandise npm run build
 ```
 
-To update, rebuild the storefront source and replace only `spiritual-capital-merchandise/` with the contents of its `out/` directory. Keep root `index.html`, `style.css`, `CNAME`, church images, and conference registration pages intact. The root `.nojekyll` marker allows Next.js `_next/` assets to be served by GitHub Pages. Publishing remains the existing GitHub Pages branch source (`main`, `/`).
+Replace only `2ninestore/merchandise/` with the contents of `out/`.
+Keep the church homepage, CNAME, root images, registration page, and `.nojekyll` intact.
+GitHub Pages publishes the existing `main` branch from `/`.
 
-The storefront supports product selection, a browser-local bag, and a rotatable 3D garment viewer with GLB exports. Prices and checkout are previews; payment and order processing are not connected.
+The 2nine storefront includes animated light, a flowing text loop, detailed floating garments,
+product selection, and a browser-local bag. Prices and live ordering are not yet connected.
